@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-facade-xml type="demo">
+    <!-- Person -->
+    <party.Party partyId="TEST_PERSON_1" partyTypeEnumId="PERSON" createdDate="2026-05-19 12:00:00"/>
+    <party.Person partyId="TEST_PERSON_1" firstName="John" lastName="Doe" dateOfBirth="1990-01-01"/>
+    
+    <!-- Party Group -->
+    <party.Party partyId="TEST_GROUP_1" partyTypeEnumId="PARTY_GROUP" createdDate="2026-05-19 12:00:00"/>
+    <party.PartyGroup partyId="TEST_GROUP_1" groupName="Acme Corp" description="A test company"/>
+    
+    <!-- Contact Mech for Email -->
+    <party.ContactMech contactMechId="TEST_EMAIL_1" contactMechTypeId="EMAIL" infoString="john.doe@acmecorp.com" createdDate="2026-05-19 12:00:00"/>
+    <party.PartyContactMech partyId="TEST_PERSON_1" contactMechId="TEST_EMAIL_1" fromDate="2026-05-19 12:00:00"/>
+    
+    <!-- Contact Mech for Phone -->
+    <party.ContactMech contactMechId="TEST_PHONE_1" contactMechTypeId="TELECOM_NUMBER" infoString="555-0199" createdDate="2026-05-19 12:00:00"/>
+    <party.PartyContactMech partyId="TEST_GROUP_1" contactMechId="TEST_PHONE_1" fromDate="2026-05-19 12:00:00"/>
+    <party.PartyContactMech partyId="TEST_PERSON_1" contactMechId="TEST_PHONE_1" fromDate="2026-05-19 12:00:00"/>
+</entity-facade-xml>
