@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-facade-data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/entity-facade-data-3.xml">
+
+    <moqui.basic.Enumeration enumerationId="PERSON" enumTypeId="PartyType" description="Person"/>
+    <moqui.basic.Enumeration enumerationId="PARTY_GROUP" enumTypeId="PartyType" description="Party Group"/>
+    <moqui.basic.Enumeration enumerationId="EMAIL" enumTypeId="ContactMechType" description="Email Address"/>
+    <moqui.basic.Enumeration enumerationId="TELECOM_NUMBER" enumTypeId="ContactMechType" description="Phone Number"/>
+
+    <mantle.party.Party partyId="100" partyTypeEnumId="PERSON" createdDate="2026-01-01 10:00:00.000"/>
+    <mantle.party.Person partyId="100" firstName="John" lastName="Doe" dateOfBirth="1995-05-15"/>
+
+    <mantle.party.Party partyId="200" partyTypeEnumId="PARTY_GROUP" createdDate="2026-01-01 11:00:00.000"/>
+    <mantle.party.PartyGroup partyId="200" groupName="Acme Corp" description="Global Trade Partner"/>
+
+    <mantle.party.ContactMech contactMechId="M101" contactMechTypeId="EMAIL" infoString="john.doe@example.com" createdDate="2026-01-01 10:05:00.000"/>
+    <mantle.party.ContactMech contactMechId="M102" contactMechTypeId="TELECOM_NUMBER" infoString="+1-555-0199" createdDate="2026-01-01 11:05:00.000"/>
+
+    <mantle.party.PartyContactMech partyId="100" contactMechId="M101" fromDate="2026-01-01 10:05:00.000"/>
+    <mantle.party.PartyContactMech partyId="200" contactMechId="M102" fromDate="2026-01-01 11:05:00.000"/>
+
+</entity-facade-data>
