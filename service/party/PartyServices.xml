@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
+
+    <service verb="create" noun="Person" type="script" location="component://party/service/party/createPerson.groovy" authenticate="anonymous-all" validate="false">
+        <in-parameters>
+            <parameter name="partyId" type="String" required="true"/>
+            <parameter name="firstName" type="String" required="true"/>
+            <parameter name="lastName" type="String" required="true"/>
+            <parameter name="dateOfBirth" type="java.sql.Date" required="false"/>
+        </in-parameters>
+        <out-parameters>
+            <parameter name="response" type="String"/>
+        </out-parameters>
+    </service>
+</services>
